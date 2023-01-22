@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/home.css" type="text/css">
+    <title>Reservations</title>
+</head>
+<body>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark " style="background-color: #00043A;">
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center">
+            <a class="navbar-brand" href="home.html">Pain A Nice</a></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reservation.html">Reservations</a>
+                </li>
+
+            </ul>
+
+            <a class="btn btn-outline-secondary " href="./login.html" onclick="handleLogout()">Logout</a>
+        </div>
+
+
+    </div>
+
+
+</nav>
+
+
+
+
+
+<div class="container" id="home-container">
+    <br>
+    <h1 id="title-main">Schedule Your Reservation</h1>
+    <br>
+    <div id="reservation-form-container">
+        <form id="reservation-form">
+            <div class="form-group">
+                <h3>What Day would you like?</h3><br>
+                <input type="date" class="form-control" id="reservation-input-date"  rows="5"></input><br>
+                <h3>What time would you like?</h3><br>
+                <input type="time" class="form-control" id="reservation-input-time"  min="11:00" max="13:00" rows="5"></input>
+            </div>
+            <br>
+            <button id="submit-button" type="submit" class="btn btn-outline-secondary btn-sm">Submit</button>
+        </form>
+
+        <div id="reservation-container" class="container-fluid"></div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="reservation-edit-modal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="reservation-edit-modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="reservation-edit-modal-title">Edit your reservation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex">
+                <textarea class="form-control" rows="5" id="reservation-body"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" id="update-reservation-button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="./javascript/reservation.js" type="application/javascript"></script>
+</body>
+</html>
