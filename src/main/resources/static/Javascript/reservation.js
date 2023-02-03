@@ -96,6 +96,7 @@ const createReservationCards = (array) => {
             <div class="card d-flex" style="width: 18rem; height: 18rem;">
                 <div class="card-body d-flex flex-column  justify-content-between" style="height: available">
                     <p class="card-text">${obj.date}</p>
+                    <p class="card-text">${obj.time}</p>
                     <div class="d-flex justify-content-between">
                         <button class="btn btn-danger" onclick="handleDelete(${obj.id})">Delete</button>
                         <button onclick="getReservationById(${obj.id})" type="button" class="btn btn-primary"
@@ -120,6 +121,7 @@ const populateModal = (obj) =>{
     reservationDate.innerText = ''
 
     reservationDate.innerText = obj.date
+    reservationTime.innerText = obj.time
     updateReservationBtn.setAttribute('data-reservation-id', obj.id)
 }
 

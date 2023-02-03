@@ -33,7 +33,7 @@ public class ReviewController {
     }
 
     @PutMapping
-    public void updateReview(@RequestBody ReviewDto reviewDto){
+    public void updateReviewById(@RequestBody ReviewDto reviewDto){
         reviewService.updateReviewById(reviewDto);
     }
 

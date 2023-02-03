@@ -23,7 +23,7 @@ public class ReservationServiceImpl implements ReservationService {
 
 
     @Override
-    public List<ReservationDto> getAllReservationByUserId(Long userId){
+    public List<ReservationDto> getAllReservationsByUserId(Long userId){
         Optional<User> userOptional = userRepository.findById(userId);
         if(userOptional.isPresent()){
             List<Reservation> reservationList = reservationRepository.findAllByUserEquals(userOptional.get());
@@ -32,10 +32,10 @@ public class ReservationServiceImpl implements ReservationService {
         return Collections.emptyList();
     }
 
-    @Override
-    public List<ReservationDto> getAllReservationsByUserId(Long userId) {
-        return null;
-    }
+//    @Override
+//    public List<ReservationDto> getAllReservationsByUserId(Long userId) {
+//        return null;
+//    }
 
     @Override
     @Transactional

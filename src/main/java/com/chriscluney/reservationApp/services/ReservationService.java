@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface ReservationService {
-    List<ReservationDto> getAllReservationByUserId(Long userId);
+//    List<ReservationDto> getAllReservationByUserId(Long userId);
 
     List<ReservationDto> getAllReservationsByUserId(Long userId);
 
