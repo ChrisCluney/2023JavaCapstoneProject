@@ -9,6 +9,8 @@ const reservationContainer = document.getElementById("reservation-container")
 
 //Modal Elements
 let reservationBody = document.getElementById(`reservation-body`)
+let reservationDate = document.getElementById("reservation-input-date-edit")
+let reservationTime = document.getElementById("reservation-input-time-edit")
 let updateReservationBtn = document.getElementById('update-reservation-button')
 
 const headers = {
@@ -93,10 +95,13 @@ const createReservationCards = (array) => {
         let reservationCard = document.createElement("div")
         reservationCard.classList.add("m-2")
         reservationCard.innerHTML = `
-            <div class="card d-flex" style="width: 18rem; height: 18rem;">
+            <div class="card d-flex" style="width: 36rem; height: 10rem;">
                 <div class="card-body d-flex flex-column  justify-content-between" style="height: available">
-                    <p class="card-text">${obj.date}</p>
-                    <p class="card-text">${obj.time}</p>
+
+                    <p class="card-text">You have a reservation on  ${obj.date} at ${obj.time}</p>
+
+
+
                     <div class="d-flex justify-content-between">
                         <button class="btn btn-danger" onclick="handleDelete(${obj.id})">Delete</button>
                         <button onclick="getReservationById(${obj.id})" type="button" class="btn btn-primary"
