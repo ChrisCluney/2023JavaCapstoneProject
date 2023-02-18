@@ -7,8 +7,8 @@ which is french for bread in Nice. It is a site for a resturant where you can wr
 reviews and make reservations.
 </p>
 
-![Front page of site](painsite1.png)
-![Reservation page of site](painsite2.png)
+![Front page of site](src/main/resources/painsite1.png)
+![Reservation page of site](src/main/resources/painsite2.png)
 
 <hr>
 
