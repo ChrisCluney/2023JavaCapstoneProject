@@ -92,14 +92,11 @@ const createReviewCards = (array) => {
         reviewCard.innerHTML = `
             <div class="card d-flex" style="width: 36rem; height: 10rem;">
                 <div class="card-body d-flex flex-column  justify-content-between" style="height: available">
-                    By ${userName1}
+
                     <p class="card-text">${obj.body}</p>
                     <div class="d-flex justify-content-between">
                         <button class="btn btn-danger" onclick="handleDelete(${obj.id})">Delete</button>
-                        <button onclick="getReviewById(${obj.id})" type="button" class="btn btn-primary"
-                        data-bs-toggle="modal" data-bs-target="#review-edit-modal">
-                        Edit
-                        </button>
+
                     </div>
                 </div>
             </div>

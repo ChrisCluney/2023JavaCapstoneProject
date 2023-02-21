@@ -103,11 +103,8 @@ const createReservationCards = (array) => {
 
 
                     <div class="d-flex justify-content-between">
-                        <button class="btn btn-danger" onclick="handleDelete(${obj.id})">Delete</button>
-                        <button onclick="getReservationById(${obj.id})" type="button" class="btn btn-primary"
-                        data-bs-toggle="modal" data-bs-target="#reservation-edit-modal">
-                        Edit
-                        </button>
+                        <button class="btn btn-outline-secondary" onclick="handleDelete(${obj.id})">Delete</button>
+
                     </div>
                 </div>
             </div>
