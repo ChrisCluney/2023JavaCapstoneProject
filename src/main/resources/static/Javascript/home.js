@@ -95,7 +95,7 @@ const createReviewCards = (array) => {
 
                     <p class="card-text">${obj.body}</p>
                     <div class="d-flex justify-content-between">
-                        <button class="btn btn-danger" onclick="handleDelete(${obj.id})">Delete</button>
+                        <button class="btn btn-outline-secondary" onclick="handleDelete(${obj.id})">Delete</button>
 
                     </div>
                 </div>
